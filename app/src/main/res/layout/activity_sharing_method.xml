@@ -1,0 +1,58 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/noteScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#008080">
+
+    <LinearLayout
+        android:id="@+id/noteContentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/noteTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:fontFamily="serif"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/noteDateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:paddingBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/noteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:fontFamily="serif"
+            android:lineSpacingExtra="8dp"/>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/imageContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="30dp"
+                android:gravity="center"
+            android:orientation="horizontal" />
+        </HorizontalScrollView>
+
+
+    </LinearLayout>
+</ScrollView>

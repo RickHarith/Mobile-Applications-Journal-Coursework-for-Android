@@ -1,0 +1,83 @@
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/purple_500"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_500">
+
+            <!-- Title TextView -->
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textSize="20sp"
+                android:padding="8dp"
+                android:textStyle="bold"/>
+
+            <!-- Content TextView -->
+            <TextView
+                android:id="@+id/txtContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtTitle"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:padding="8dp"/>
+
+            <!-- Image Container -->
+            <LinearLayout
+                android:id="@+id/imageContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtContent"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:visibility="gone"/>
+
+            <!-- Date TextView -->
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/imageContainer"
+                android:textColor="@android:color/white"
+                android:padding="8dp"/>
+
+            <!-- Delete Icon -->
+            <ImageView
+                android:id="@+id/imgShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtDate"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-40dp"
+                android:layout_marginEnd="0dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_share_button"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/imgDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+
+                android:src="@drawable/ic_garbage_can"
+                app:tint="@color/icon_red"
+                android:clickable="true"
+                android:focusable="true" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
